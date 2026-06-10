@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suggestion Box</title>
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --card: #ffffff;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --accent: #4f46e5;
+      --accent-soft: #eef2ff;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 20px 64px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-soft);
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 6vw, 40px);
+      line-height: 1.15;
+      margin: 0 0 14px;
+      font-weight: 700;
+    }
+
+    .intro {
+      font-size: clamp(16px, 2.5vw, 18px);
+      color: var(--muted);
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .form-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 30px -12px rgba(31, 41, 55, 0.18);
+      overflow: hidden;
+    }
+
+    .form-card iframe {
+      display: block;
+      width: 100%;
+      height: 1100px;
+      border: 0;
+    }
+
+    .fallback {
+      text-align: center;
+      margin-top: 24px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .fallback a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .fallback a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @media (max-width: 480px) {
+      .wrap { padding: 32px 14px 48px; }
+      .form-card iframe { height: 1250px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="badge">Virtual Suggestion Box</span>
+      <h1>Got an idea? We're listening.</h1>
+      <p class="intro">
+        Share your thoughts on how we can make our workplace better. Every
+        suggestion is read. It's anonymous &mdash; unless you choose to add
+        your name.
+      </p>
+    </header>
+
+    <main class="form-card">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSd8ReWv3GbAZOWM--o3pA7IA205TTbr9FF1OXGXfxZcfhUK4A/viewform?embedded=true"
+        title="Suggestion Box form"
+        loading="lazy">
+        Loading&hellip;
+      </iframe>
+    </main>
+
+    <p class="fallback">
+      Trouble seeing the form?
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd8ReWv3GbAZOWM--o3pA7IA205TTbr9FF1OXGXfxZcfhUK4A/viewform"
+         target="_blank" rel="noopener">Open it in a new tab</a>.
+    </p>
+
+    <footer>
+      Responses are collected privately and reviewed by the team.
+    </footer>
+  </div>
+</body>
+</html>
