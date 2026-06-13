@@ -69,6 +69,25 @@
       margin: 0 auto;
     }
 
+    .photo-figure {
+      margin: 28px auto 0;
+      max-width: 400px;
+    }
+
+    .photo-figure img {
+      display: block;
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px -12px rgba(31, 41, 55, 0.25);
+    }
+
+    .photo-figure figcaption {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
     .form-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -122,6 +141,12 @@
         suggestion is read. It's anonymous &mdash; unless you choose to add
         your name.
       </p>
+      <figure class="photo-figure">
+        <img
+          src="7B63E207-3D3C-40AF-AE5F-D40E4F1067CA_1_105_c.jpeg"
+          alt="The physical suggestion box at work: a labeled canister asking what management should start, stop, and continue doing">
+        <figcaption>The original box at the office &mdash; now taking suggestions online too.</figcaption>
+      </figure>
     </header>
 
     <main class="form-card">
